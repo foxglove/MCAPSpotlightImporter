@@ -10,7 +10,7 @@ build:
 		SYMROOT=$(PWD)/build \
 		-configuration Release \
 		clean build
-	file build/Release/MCAPSpotlightImporter.mdimporter/Contents/MacOS/MCAPSpotlightImporter
+	lipo build/Release/MCAPSpotlightImporter.mdimporter/Contents/MacOS/MCAPSpotlightImporter -verify_arch arm64 x86_64
 	cd build/Release && zip -r MCAPSpotlightImporter.mdimporter.zip MCAPSpotlightImporter.mdimporter
 	cd build/Release && zip -r MCAPSpotlightImporter.mdimporter.dSYM.zip MCAPSpotlightImporter.mdimporter.dSYM
 
