@@ -2,7 +2,15 @@
 build:
 	# https://developer.apple.com/documentation/xcode/building-swift-packages-or-apps-that-use-them-in-continuous-integration-workflows
 	# https://stackoverflow.com/questions/4969932/separate-build-directory-using-xcodebuild
-	xcodebuild -disableAutomaticPackageResolution -clonedSourcePackagesDirPath .swiftpm-packages -scheme MCAPSpotlightImporter SYMROOT=$(PWD)/build -configuration Release clean build
+	xcodebuild \
+		-disableAutomaticPackageResolution \
+		-clonedSourcePackagesDirPath .swiftpm-packages \
+		-destination generic/platform=macOS \
+		-scheme MCAPSpotlightImporter \
+		SYMROOT=$(PWD)/build \
+		-configuration Release \
+		clean build
+	file build/Release/MCAPSpotlightImporter.mdimporter/Contents/MacOS/MCAPSpotlightImporter
 	cd build/Release && zip -r MCAPSpotlightImporter.mdimporter.zip MCAPSpotlightImporter.mdimporter
 	cd build/Release && zip -r MCAPSpotlightImporter.mdimporter.dSYM.zip MCAPSpotlightImporter.mdimporter.dSYM
 
