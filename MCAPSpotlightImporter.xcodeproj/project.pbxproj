@@ -27,6 +27,7 @@
 		168EC2412912060700781DDC /* ImporterPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImporterPlugin.swift; sourceTree = "<group>"; };
 		168EC2432912060C00781DDC /* UUIDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDs.swift; sourceTree = "<group>"; };
 		168EC2452912061100781DDC /* importMCAPAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = importMCAPAttributes.swift; sourceTree = "<group>"; };
+		168EC24F2912F29900781DDC /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 				168EC2412912060700781DDC /* ImporterPlugin.swift */,
 				168EC2452912061100781DDC /* importMCAPAttributes.swift */,
 				168EC2432912060C00781DDC /* UUIDs.swift */,
+				168EC24F2912F29900781DDC /* Config.xcconfig */,
 			);
 			path = MCAPSpotlightImporter;
 			sourceTree = "<group>";
@@ -189,6 +191,7 @@
 /* Begin XCBuildConfiguration section */
 		168EC22C291202E400781DDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 168EC24F2912F29900781DDC /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -247,6 +250,7 @@
 		};
 		168EC22D291202E400781DDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 168EC24F2912F29900781DDC /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -298,11 +302,11 @@
 		};
 		168EC22F291202E400781DDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 168EC24F2912F29900781DDC /* Config.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -318,7 +322,6 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.foxglove.studio.mcap-mdimporter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -332,11 +335,11 @@
 		};
 		168EC230291202E400781DDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 168EC24F2912F29900781DDC /* Config.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -352,7 +355,6 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.foxglove.studio.mcap-mdimporter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
