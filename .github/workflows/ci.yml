@@ -46,5 +46,5 @@ jobs:
         with:
           draft: true
           files: |
-            ./build/Release/MCAPSpotlightImporter.mdimporter
-            ./build/Release/MCAPSpotlightImporter.mdimporter.dSYM
+            ./build/Release/MCAPSpotlightImporter.mdimporter.zip
+            ./build/Release/MCAPSpotlightImporter.mdimporter.dSYM.zip
