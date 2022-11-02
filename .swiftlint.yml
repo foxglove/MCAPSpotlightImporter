@@ -1,5 +1,6 @@
 excluded:
   - .build
+  - .swiftpm-packages
 
 disabled_rules:
   - function_body_length

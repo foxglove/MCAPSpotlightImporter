@@ -8,9 +8,22 @@ on:
     branches: ["*"]
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - run: make lint-ci
+      - run: make format-ci
+
   build:
     permissions:
       contents: write
+    needs:
+      - lint
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,15 +31,13 @@ jobs:
           fetch-depth: 0
           lfs: true
 
-      - uses: actions/cache@v2.1.6
+      - uses: actions/cache@v3
         with:
           path: |
             .swiftpm-packages
           key: v0-${{ runner.os }}-swiftpm-${{ hashFiles('**/Package.resolved') }}
           restore-keys: v0-${{ runner.os }}-swiftpm-
 
-      - run: make lint-ci
-      - run: make format-ci
       - run: make build
 
       - name: Release
