@@ -9,7 +9,6 @@
 			<string>MDImporter</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>dev.foxglove.mcap</string>
 				<string>dev.mcap.mcap</string>
 			</array>
 		</dict>

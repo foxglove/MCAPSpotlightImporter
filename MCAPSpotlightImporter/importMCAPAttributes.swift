@@ -15,7 +15,6 @@ enum SchemaAttributes: String {
 
 extension UTType {
   static let mcap = UTType(importedAs: "dev.mcap.mcap", conformingTo: .data)
-  static let foxgloveMCAP = UTType(importedAs: "dev.foxglove.mcap", conformingTo: .data)
 }
 
 extension FileHandle: IRandomAccessReadable {
@@ -34,7 +33,7 @@ extension FileHandle: IRandomAccessReadable {
 }
 
 func importMCAPAttributes(_ attributes: inout [AnyHashable: Any], forFileAt url: URL, contentTypeUTI: String) -> Bool {
-  guard contentTypeUTI == UTType.mcap.identifier || contentTypeUTI == UTType.foxgloveMCAP.identifier else {
+  guard contentTypeUTI == UTType.mcap.identifier else {
     log.info("skipping importAttributes for url=\(url) contentTypeUTI=\(contentTypeUTI)")
     return false
   }

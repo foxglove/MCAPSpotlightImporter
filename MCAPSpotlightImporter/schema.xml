@@ -10,20 +10,6 @@
     <attribute name="dev_foxglove_studio_mcap_metadata" multivalued="true" type="CFString"/>
   </attributes>
   <types>
-    <type name="dev.foxglove.mcap">
-      <allattrs>
-        dev_foxglove_studio_mcap_topics
-        dev_foxglove_studio_mcap_schemas
-        dev_foxglove_studio_mcap_attachments
-        dev_foxglove_studio_mcap_metadata
-      </allattrs>
-      <displayattrs>
-        dev_foxglove_studio_mcap_topics
-        dev_foxglove_studio_mcap_schemas
-        dev_foxglove_studio_mcap_attachments
-        dev_foxglove_studio_mcap_metadata
-      </displayattrs>
-    </type>
     <type name="dev.mcap.mcap">
       <allattrs>
         dev_foxglove_studio_mcap_topics
