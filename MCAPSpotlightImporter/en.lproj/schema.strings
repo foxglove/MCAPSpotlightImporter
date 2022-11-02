@@ -1,0 +1,5 @@
+"dev_foxglove_mcap_mcap_topics" = "Topics";
+"dev_foxglove_mcap_mcap_topics.Description" = "Topic names contained in the MCAP file";
+
+"dev_foxglove_mcap_mcap_schemas" = "Schemas";
+"dev_foxglove_mcap_mcap_schemas.Description" = "Schema names contained in the MCAP file";

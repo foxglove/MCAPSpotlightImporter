@@ -6,8 +6,27 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		168EC237291205AA00781DDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 168EC236291205AA00781DDC /* main.m */; };
+		168EC239291205C600781DDC /* schema.xml in Resources */ = {isa = PBXBuildFile; fileRef = 168EC238291205C600781DDC /* schema.xml */; };
+		168EC23C291205CD00781DDC /* schema.strings in Resources */ = {isa = PBXBuildFile; fileRef = 168EC23E291205CD00781DDC /* schema.strings */; };
+		168EC2402912060100781DDC /* PluginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168EC23F2912060100781DDC /* PluginFactory.swift */; };
+		168EC2422912060800781DDC /* ImporterPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168EC2412912060700781DDC /* ImporterPlugin.swift */; };
+		168EC2442912060C00781DDC /* UUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168EC2432912060C00781DDC /* UUIDs.swift */; };
+		168EC2462912061100781DDC /* importMCAPAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168EC2452912061100781DDC /* importMCAPAttributes.swift */; };
+		168EC24C291206BC00781DDC /* MCAP in Frameworks */ = {isa = PBXBuildFile; productRef = 168EC24B291206BC00781DDC /* MCAP */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		168EC22A291202E400781DDC /* MCAPSpotlightImporter.mdimporter */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCAPSpotlightImporter.mdimporter; sourceTree = BUILT_PRODUCTS_DIR; };
+		168EC2342912054800781DDC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		168EC236291205AA00781DDC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		168EC238291205C600781DDC /* schema.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = schema.xml; sourceTree = "<group>"; };
+		168EC23D291205CD00781DDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/schema.strings; sourceTree = "<group>"; };
+		168EC23F2912060100781DDC /* PluginFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PluginFactory.swift; sourceTree = "<group>"; };
+		168EC2412912060700781DDC /* ImporterPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImporterPlugin.swift; sourceTree = "<group>"; };
+		168EC2432912060C00781DDC /* UUIDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDs.swift; sourceTree = "<group>"; };
+		168EC2452912061100781DDC /* importMCAPAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = importMCAPAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -15,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168EC24C291206BC00781DDC /* MCAP in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -24,7 +44,9 @@
 		168EC221291202E400781DDC = {
 			isa = PBXGroup;
 			children = (
+				168EC231291203BD00781DDC /* MCAPSpotlightImporter */,
 				168EC22B291202E400781DDC /* Products */,
+				168EC24A291206BC00781DDC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -34,6 +56,28 @@
 				168EC22A291202E400781DDC /* MCAPSpotlightImporter.mdimporter */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		168EC231291203BD00781DDC /* MCAPSpotlightImporter */ = {
+			isa = PBXGroup;
+			children = (
+				168EC2342912054800781DDC /* Info.plist */,
+				168EC236291205AA00781DDC /* main.m */,
+				168EC238291205C600781DDC /* schema.xml */,
+				168EC23E291205CD00781DDC /* schema.strings */,
+				168EC23F2912060100781DDC /* PluginFactory.swift */,
+				168EC2412912060700781DDC /* ImporterPlugin.swift */,
+				168EC2452912061100781DDC /* importMCAPAttributes.swift */,
+				168EC2432912060C00781DDC /* UUIDs.swift */,
+			);
+			path = MCAPSpotlightImporter;
+			sourceTree = "<group>";
+		};
+		168EC24A291206BC00781DDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -50,8 +94,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				168EC249291206B600781DDC /* PBXTargetDependency */,
 			);
 			name = MCAPSpotlightImporter;
+			packageProductDependencies = (
+				168EC24B291206BC00781DDC /* MCAP */,
+			);
 			productName = MCAPSpotlightImporter;
 			productReference = 168EC22A291202E400781DDC /* MCAPSpotlightImporter.mdimporter */;
 			productType = "com.apple.product-type.bundle";
@@ -64,9 +112,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1400;
+				ORGANIZATIONNAME = "Foxglove Technologies Inc.";
 				TargetAttributes = {
 					168EC229291202E400781DDC = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
 					};
 				};
 			};
@@ -79,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 168EC221291202E400781DDC;
+			packageReferences = (
+				168EC2472912063800781DDC /* XCRemoteSwiftPackageReference "mcap" */,
+			);
 			productRefGroup = 168EC22B291202E400781DDC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -93,6 +146,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168EC239291205C600781DDC /* schema.xml in Resources */,
+				168EC23C291205CD00781DDC /* schema.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,10 +158,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168EC2442912060C00781DDC /* UUIDs.swift in Sources */,
+				168EC2422912060800781DDC /* ImporterPlugin.swift in Sources */,
+				168EC237291205AA00781DDC /* main.m in Sources */,
+				168EC2462912061100781DDC /* importMCAPAttributes.swift in Sources */,
+				168EC2402912060100781DDC /* PluginFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		168EC249291206B600781DDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 168EC248291206B600781DDC /* MCAP */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		168EC23E291205CD00781DDC /* schema.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				168EC23D291205CD00781DDC /* en */,
+			);
+			name = schema.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		168EC22C291202E400781DDC /* Debug */ = {
@@ -221,18 +299,33 @@
 		168EC22F291202E400781DDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MCAPSpotlightImporter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.foxglove.MCAPSpotlightImporter;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.foxglove.studio.mcap-mdimporter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = mdimporter;
 			};
 			name = Debug;
@@ -240,18 +333,32 @@
 		168EC230291202E400781DDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MCAPSpotlightImporter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.foxglove.MCAPSpotlightImporter;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.foxglove.studio.mcap-mdimporter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = mdimporter;
 			};
 			name = Release;
@@ -278,6 +385,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		168EC2472912063800781DDC /* XCRemoteSwiftPackageReference "mcap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/foxglove/mcap";
+			requirement = {
+				kind = revision;
+				revision = 6ce7cc3221f26fca14c86239fd484a32be87894b;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		168EC248291206B600781DDC /* MCAP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 168EC2472912063800781DDC /* XCRemoteSwiftPackageReference "mcap" */;
+			productName = MCAP;
+		};
+		168EC24B291206BC00781DDC /* MCAP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 168EC2472912063800781DDC /* XCRemoteSwiftPackageReference "mcap" */;
+			productName = MCAP;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 168EC222291202E400781DDC /* Project object */;
 }

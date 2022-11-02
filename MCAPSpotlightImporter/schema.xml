@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema version="1.0" xmlns="http://www.apple.com/metadata"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://www.apple.com/metadata file:///System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Resources/MetadataSchema.xsd">
+  <attributes>
+    <attribute name="dev_foxglove_mcap_mcap_topics" multivalued="true" type="CFString"/>
+    <attribute name="dev_foxglove_mcap_mcap_schemas" multivalued="true" type="CFString"/>
+  </attributes>
+  <types>
+    <type name="dev.foxglove.mcap">
+      <allattrs>
+        dev_foxglove_mcap_mcap_topics
+        dev_foxglove_mcap_mcap_schemas
+      </allattrs>
+      <displayattrs>
+        dev_foxglove_mcap_mcap_topics
+        dev_foxglove_mcap_mcap_schemas
+      </displayattrs>
+    </type>
+    <type name="dev.mcap.mcap">
+      <allattrs>
+        dev_foxglove_mcap_mcap_topics
+        dev_foxglove_mcap_mcap_schemas
+      </allattrs>
+      <displayattrs>
+        dev_foxglove_mcap_mcap_topics
+        dev_foxglove_mcap_mcap_schemas
+      </displayattrs>
+    </type>
+	</types>
+</schema>
