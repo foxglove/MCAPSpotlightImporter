@@ -1,6 +1,6 @@
 # MCAPSpotlightImporter
 
-MCAPSpotlightImporter is a macOS [Spotlight Importer](https://developer.apple.com/library/archive/documentation/Carbon/Conceptual/MDImporters/Concepts/WritingAnImp.html) for [MCAP](https://mcap.dev/) files. The importer gives Spotlight the ability to index MCAP files so their topics and schemas are visible and searchable in Finder and anywhere else that Spotlight is used.
+MCAPSpotlightImporter is a macOS [Spotlight Importer](https://developer.apple.com/library/archive/documentation/Carbon/Conceptual/MDImporters/Concepts/WritingAnImp.html) for [MCAP](https://mcap.dev/) files. The importer gives Spotlight the ability to index MCAP files so the names of their topics, schemas, attachments, and metadata are visible and searchable in Finder and anywhere else that Spotlight is used.
 
 This importer is included with the [Foxglove Studio](https://foxglove.dev/studio) desktop app for macOS.
 

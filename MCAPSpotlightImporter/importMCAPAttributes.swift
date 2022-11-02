@@ -7,8 +7,10 @@ private let log = Logger(subsystem: "dev.foxglove.studio.mcap-mdimporter", categ
 
 /** Attributes declared in schema.xml */
 enum SchemaAttributes: String {
-  case topics = "dev_foxglove_mcap_mcap_topics"
-  case schemas = "dev_foxglove_mcap_mcap_schemas"
+  case topics = "dev_foxglove_studio_mcap_topics"
+  case schemas = "dev_foxglove_studio_mcap_schemas"
+  case attachments = "dev_foxglove_studio_mcap_attachments"
+  case metadata = "dev_foxglove_studio_mcap_metadata"
 }
 
 extension UTType {
@@ -46,6 +48,8 @@ func importMCAPAttributes(_ attributes: inout [AnyHashable: Any], forFileAt url:
     let uniqueSchemas = Set(reader.schemasById.values.lazy.map(\.name))
     attributes[SchemaAttributes.topics.rawValue] = Array(uniqueTopics)
     attributes[SchemaAttributes.schemas.rawValue] = Array(uniqueSchemas)
+    attributes[SchemaAttributes.attachments.rawValue] = reader.attachmentIndexes.map(\.name)
+    attributes[SchemaAttributes.metadata.rawValue] = reader.metadataIndexes.map(\.name)
     log.info("successful import of \(url), \(uniqueTopics.count) topics, \(uniqueSchemas.count) schemas")
     return true
   } catch let err {

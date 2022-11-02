@@ -4,28 +4,38 @@
                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                       xsi:schemaLocation="http://www.apple.com/metadata file:///System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Resources/MetadataSchema.xsd">
   <attributes>
-    <attribute name="dev_foxglove_mcap_mcap_topics" multivalued="true" type="CFString"/>
-    <attribute name="dev_foxglove_mcap_mcap_schemas" multivalued="true" type="CFString"/>
+    <attribute name="dev_foxglove_studio_mcap_topics" multivalued="true" type="CFString"/>
+    <attribute name="dev_foxglove_studio_mcap_schemas" multivalued="true" type="CFString"/>
+    <attribute name="dev_foxglove_studio_mcap_attachments" multivalued="true" type="CFString"/>
+    <attribute name="dev_foxglove_studio_mcap_metadata" multivalued="true" type="CFString"/>
   </attributes>
   <types>
     <type name="dev.foxglove.mcap">
       <allattrs>
-        dev_foxglove_mcap_mcap_topics
-        dev_foxglove_mcap_mcap_schemas
+        dev_foxglove_studio_mcap_topics
+        dev_foxglove_studio_mcap_schemas
+        dev_foxglove_studio_mcap_attachments
+        dev_foxglove_studio_mcap_metadata
       </allattrs>
       <displayattrs>
-        dev_foxglove_mcap_mcap_topics
-        dev_foxglove_mcap_mcap_schemas
+        dev_foxglove_studio_mcap_topics
+        dev_foxglove_studio_mcap_schemas
+        dev_foxglove_studio_mcap_attachments
+        dev_foxglove_studio_mcap_metadata
       </displayattrs>
     </type>
     <type name="dev.mcap.mcap">
       <allattrs>
-        dev_foxglove_mcap_mcap_topics
-        dev_foxglove_mcap_mcap_schemas
+        dev_foxglove_studio_mcap_topics
+        dev_foxglove_studio_mcap_schemas
+        dev_foxglove_studio_mcap_attachments
+        dev_foxglove_studio_mcap_metadata
       </allattrs>
       <displayattrs>
-        dev_foxglove_mcap_mcap_topics
-        dev_foxglove_mcap_mcap_schemas
+        dev_foxglove_studio_mcap_topics
+        dev_foxglove_studio_mcap_schemas
+        dev_foxglove_studio_mcap_attachments
+        dev_foxglove_studio_mcap_metadata
       </displayattrs>
     </type>
   </types>

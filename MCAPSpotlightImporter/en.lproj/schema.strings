@@ -1,5 +1,11 @@
-"dev_foxglove_mcap_mcap_topics" = "Topics";
-"dev_foxglove_mcap_mcap_topics.Description" = "Topic names contained in the MCAP file";
+"dev_foxglove_studio_mcap_topics" = "Topics";
+"dev_foxglove_studio_mcap_topics.Description" = "Topic names contained in the MCAP file";
 
-"dev_foxglove_mcap_mcap_schemas" = "Schemas";
-"dev_foxglove_mcap_mcap_schemas.Description" = "Schema names contained in the MCAP file";
+"dev_foxglove_studio_mcap_schemas" = "Schemas";
+"dev_foxglove_studio_mcap_schemas.Description" = "Schema names contained in the MCAP file";
+
+"dev_foxglove_studio_mcap_attachments" = "Attachments";
+"dev_foxglove_studio_mcap_attachments.Description" = "Attachment names contained in the MCAP file";
+
+"dev_foxglove_studio_mcap_metadata" = "Metadata";
+"dev_foxglove_studio_mcap_metadata.Description" = "Metadata names contained in the MCAP file";
