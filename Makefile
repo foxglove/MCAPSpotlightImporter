@@ -6,8 +6,8 @@ build:
 
 .PHONY: lint-ci
 lint-ci:
-	docker run -t --rm -v $(pwd):/work -w /work ghcr.io/realm/swiftlint:0.49.1
+	docker run -t --rm -v $(PWD):/work -w /work ghcr.io/realm/swiftlint:0.49.1
 
 .PHONY: format-ci
 format-ci:
-	docker run -t --rm -v $(pwd):/work ghcr.io/nicklockwood/swiftformat:0.49.18 --lint /work
+	docker run -t --rm -v $(PWD):/work ghcr.io/nicklockwood/swiftformat:0.49.18 --lint /work
