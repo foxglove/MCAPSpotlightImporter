@@ -3,7 +3,7 @@ import MCAP
 import OSLog
 import UniformTypeIdentifiers
 
-fileprivate let log = Logger(subsystem: "dev.foxglove.studio.mcap-mdimporter", category: "importMCAPAttributes")
+private let log = Logger(subsystem: "dev.foxglove.studio.mcap-mdimporter", category: "importMCAPAttributes")
 
 /** Attributes declared in schema.xml */
 enum SchemaAttributes: String {
@@ -18,7 +18,7 @@ extension UTType {
 
 extension FileHandle: IRandomAccessReadable {
   public func size() -> UInt64 {
-    return (try? seekToEnd()) ?? 0
+    (try? seekToEnd()) ?? 0
   }
 
   public func read(offset: UInt64, length: UInt64) -> Data? {
@@ -48,8 +48,7 @@ func importMCAPAttributes(_ attributes: inout [AnyHashable: Any], forFileAt url:
     attributes[SchemaAttributes.schemas.rawValue] = Array(uniqueSchemas)
     log.info("successful import of \(url), \(uniqueTopics.count) topics, \(uniqueSchemas.count) schemas")
     return true
-  }
-  catch let err {
+  } catch let err {
     log.error("failed to import \(url): \(err.localizedDescription) (\(String(describing: err))")
     return false
   }

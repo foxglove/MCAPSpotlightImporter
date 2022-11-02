@@ -1,8 +1,8 @@
+import CoreServices
 import Foundation
 import OSLog
-import CoreServices
 
-fileprivate let log = Logger(subsystem: "dev.foxglove.studio.mcap-mdimporter", category: "ImporterPlugin")
+private let log = Logger(subsystem: "dev.foxglove.studio.mcap-mdimporter", category: "ImporterPlugin")
 
 final class ImporterPlugin {
   typealias VTable = MDImporterURLInterfaceStruct
@@ -80,7 +80,7 @@ final class ImporterPlugin {
           }
         }
         outInterface?.pointee = nil
-        return HRESULT(bitPattern: 0x80000004) // E_NOINTERFACE <https://github.com/apple/swift/issues/61851>
+        return HRESULT(bitPattern: 0x8000_0004) // E_NOINTERFACE <https://github.com/apple/swift/issues/61851>
       },
       AddRef: { wrapper in
         if let instance = ImporterPlugin.fromWrapper(wrapper) {
@@ -94,8 +94,8 @@ final class ImporterPlugin {
         }
         return 0 // optional
       },
-      ImporterImportURLData: { wrapper, mutableAttributes, contentTypeUTI, url in
-        // Note: in practice, `wrapper` has the wrong value passed to it, so we can't use it here
+      ImporterImportURLData: { _, mutableAttributes, contentTypeUTI, url in
+        // Note: in practice, the first argument `wrapper` has the wrong value passed to it, so we can't use it here
         guard let contentTypeUTI = contentTypeUTI as String?,
               let url = url as URL?,
               let mutableAttributes = mutableAttributes as NSMutableDictionary?
