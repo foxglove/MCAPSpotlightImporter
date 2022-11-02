@@ -25,7 +25,7 @@ You can make a local build using Xcode, or by running `make build`. When using `
 
 - To test the .mdimporter locally, copy it to ~/Library/Spotlight.
 
-  - After each rebuild of the importer, once it has been copied to ~/Library/Spotlight, sometimes it is necessary to kill Spotlight-related processes, to ensure a cached version of the importer is not being used: `sudo killall mds mdworker mdworker_shared corespotlightd mdbulkimport`.
+  - After each rebuild of the importer, once it has been copied to ~/Library/Spotlight, sometimes it is necessary to kill Spotlight-related processes, to ensure a cached version of the importer is not being used: `sudo killall mds mdworker mdworker_shared corespotlightd mdbulkimport`. `/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill` may also help.
 
   - Run `mdimport -L` to see whether the importer plugin has been loaded. Sometimes the output of this command does not update immediately.
 
