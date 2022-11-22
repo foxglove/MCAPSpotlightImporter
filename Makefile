@@ -2,6 +2,8 @@
 build:
 	# https://developer.apple.com/documentation/xcode/building-swift-packages-or-apps-that-use-them-in-continuous-integration-workflows
 	# https://stackoverflow.com/questions/4969932/separate-build-directory-using-xcodebuild
+	# https://forums.swift.org/t/swiftpm-with-git-lfs/42396/4
+	GIT_LFS_SKIP_DOWNLOAD_ERRORS=1 \
 	xcodebuild \
 		-disableAutomaticPackageResolution \
 		-clonedSourcePackagesDirPath .swiftpm-packages \
